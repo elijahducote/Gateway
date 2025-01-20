@@ -1,0 +1,18 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.htm"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOWALL"
+    Content-Security-Policy = """
+      default-src 'self' https://evwave.myspreadshop.com;
+      frame-src https://evwave.myspreadshop.com https://*.spreadshirt.com;
+      script-src 'self' 'unsafe-inline' https://evwave.myspreadshop.com https://*.spreadshirt.com;
+      style-src 'self' 'unsafe-inline' https://evwave.myspreadshop.com https://*.spreadshirt.com;
+      img-src 'self' data: https://*.spreadshirt.com;
+      connect-src 'self' https://evwave.myspreadshop.com https://*.spreadshirt.com;
+    """
