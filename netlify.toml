@@ -1,11 +1,11 @@
 [[redirects]]
-  from = "/*"
+  from = "https://evwaveshop.com/*"
   to = "/index.htm"
   status = 200
   force = true
 
 [[headers]]
-  for = "/*"
+  for = "https://evwaveshop.com/*"
   [headers.values]
     X-Frame-Options = "ALLOWALL"
     Content-Security-Policy = """
